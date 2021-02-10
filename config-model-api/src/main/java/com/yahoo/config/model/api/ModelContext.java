@@ -85,6 +85,7 @@ public interface ModelContext {
         @ModelFeatureFlag(owners = {"bjorncs", "tokle", "baldersheim"}, removeAfter = "7.357") default boolean enableZstdCompressionAccessLog() { return true; }
         @ModelFeatureFlag(owners = {"geirst"}) default boolean enableFeedBlockInDistributor() { return false; }
         @ModelFeatureFlag(owners = {"baldersheim", "geirst", "toregge"}) default double maxDeadBytesRatio() { return 0.2; }
+        @ModelFeatureFlag(owners = {"bjorncs", "tokle"}) default List<String> allowedAthenzProxyIdentities() { return List.of(); }
     }
 
     /** Warning: As elsewhere in this package, do not make backwards incompatible changes that will break old config models! */
